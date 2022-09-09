@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pedro Afonso - Portifolio</title>
+    
+</head>
+
+<style>
+     body {
+    background: #161623;
+    
+  }
+  h1, h2 {
+    max-width: 480px;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 35px;
+    
+  }
+  h1 {
+    color: #24ff14;
+  }
+
+  h2{ color: red;}
+
+
+  .container{
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+  }
+
+  .container .card{
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+  }
+
+  .container .card .content{
+    
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0,5s;
+
+  }
+
+  .container .card:hover .content {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  .container .card .content h2{
+    position: absolute;
+    top: -80px;
+    right: 30px;
+    font-size: 8em;
+    color: #fff;
+
+  }
+
+  .container .card .content h3{
+    font-size: 1.8em;
+    color:#fff;
+    z-index: 1;
+  }
+
+  .container .card .content p{
+    font-size: 1em;
+    color: #fff;    
+    font-weight: 300;
+  }
+
+  .container .card .content a{
+    position:relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: 500;
+    box-shadow: #fff;
+
+  }
+
+  img {
+ max-width: 100%;
+ max-height: 100%;
+}
+
+.projetos{
+    max-height: 50%;
+    padding: 40px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+</style>
+
+
+
+<body>
+    <h2>Pedro Afonso De Campos Faria Maciel</h2>
+    <h1>Estudante De Engenharia De Software</h1>
+
+
+    <h1 class = "projetos">Tecnologias
+    </h1>
+    <h1 class = "projetos">Educacao</h1>
+    <h1 class = "projetos">Projetos</h1>
+    <div class="container">
+        
+       
+
+        <div class="card">
+            <div class="content">
+                <h2></h2>
+                <p> <img src="img/imposto.jpg" alt=""></p>
+                <h3>Simulador Imposto De Imposto de Renda</h3>
+                <p>Objetivo criar uma ferramenta para auxiliar pessoas que não tem conhecimento suficiente para gerar sua declaração de imposto de renda </p>
+                <a href="#">Mais Informacoes</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="content">
+                <h2></h2>
+                <p> <img src="img/c-removebg-preview.png" alt=""></p>
+                <h3>Logica de Programacao Linguagem C</h3>
+                <p> Nesse Card apresento toda minha logica de programacao na linguagem em c, para mais info basta clicar no botao abaixo !  </p>
+                <a href="#">Mais Informacoes</a>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="content">
+                <h2></h2>
+                <p> <img src="img/api.jpeg" alt=""></p>
+                <h3>API-RESET | SPRINGBOOT</h3>
+                <p>Esta aplicacao foi desenvolvida com java para ligar o front-end no beck-end. </p>
+                <a href="#">Mais Informacoes</a>
+            </div>
+        </div>
+
+        
+
+    </div>
+
+    
+
+    
+    
+
+
+   <!--JavaScript Letras-->
+    <script>
+     function typeWrite(elemento){
+        const textoArray =  elemento.innerHTML.split('');
+        elemento.innerHTML = '';
+        textoArray.forEach((letra, i) => {console.log(i) 
+        setTimeout(() => elemento.innerHTML += letra, 75 * i );
+        });
+
+     
+        }
+        const titulo = document.querySelector('h1');
+     
+        typeWrite(titulo);
+        typeWrite(document.querySelector('h2'));
+    </script>
+
+   <script src="vanilla.js"></script>
+    <script>VanillaTilt.init(document.querySelectorAll(".card"));</script>
+</body>
+</html>
